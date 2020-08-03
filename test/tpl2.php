@@ -1,4 +1,4 @@
-<?php $this->extend(ROOT . "/tpl1.php"); ?>
+<?php $this->extend("tpl1.php"); ?>
 
 <?php $this->start("b1"); ?>(2 1)<?php $this->super()->block("b1"); ?><?php $this->end("b1"); ?>
 

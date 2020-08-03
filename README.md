@@ -1,10 +1,10 @@
 # InTpl
 
-Simple PHP templates supporting template inheritance.
+Simple PHP templates supporting **Template Inheritance**.
 
 Example:
 
-`base.tpl.php`:
+`[VIEWS]/layout/base.tpl.php`:
 
 ```php
 <!DOCTYPE html>
@@ -21,10 +21,10 @@ No Content
 </body></html>
 ```
 
-`index.tpl.php`:
+`[VIEWS]/index.tpl.php`:
 
 ```php
-<?php $this->extend(VIEWS.'/base.tpl.php'); ?>
+<?php $this->extend('layout/base.tpl.php'); ?>
 
 <?php $this->start('title'); ?>Index<?php $this->end('title'); ?>
 
@@ -42,7 +42,7 @@ define('VIEWS', dirname(__FILE__));
 
 include(VIEWS . '/InTpl.php');
 
-echo InTpl::Tpl(VIEWS . '/index.tpl.php')->render(array(/*..*/));
+echo InTpl::Tpl('index.tpl.php', array(VIEWS))->render(array(/*..*/));
 ```
 
 output:
