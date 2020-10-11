@@ -4,7 +4,7 @@ Simple PHP templates supporting **Template Inheritance**.
 
 Example:
 
-`[VIEWS]/layout/base.tpl.php`:
+`{VIEWS}/layout/base.tpl.php`:
 
 ```php
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ No Content
 </body></html>
 ```
 
-`[VIEWS]/index.tpl.php`:
+`{VIEWS}/index.tpl.php`:
 
 ```php
 <?php $this->extend('layout/base.tpl.php'); ?>
@@ -42,7 +42,7 @@ define('VIEWS', dirname(__FILE__));
 
 include(VIEWS . '/InTpl.php');
 
-echo InTpl::Tpl('index.tpl.php', array(VIEWS))->render(array(/*..*/));
+echo InTpl::Tpl('index.tpl.php', [VIEWS])->render([/*..*/]);
 ```
 
 output:
