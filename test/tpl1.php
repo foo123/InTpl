@@ -6,3 +6,4 @@ Test Inheritance and Super calls:
 
 <?php $this->start("b3") ?>(1 3)<?php $this->end("b3"); ?>
 
+<?php $this->start("b4") ?><?php $this->end("b4"); ?>

@@ -6,3 +6,4 @@
 
 <?php $this->start("b3"); ?>(2 3)<?php $this->super()->block("b3"); ?><?php $this->end("b3"); ?>
 
+<?php $this->start("b4"); ?>(2 4)<?php $this->super()->block("b4", true, " default text"); ?><?php $this->end("b4"); ?>
